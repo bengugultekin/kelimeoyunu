@@ -10,8 +10,8 @@ cevap = "_"
 
 def liste_olustur(liste, sınır):
     sınır = list(sınır)
-    liste = list(liste)
-    for i in range(0, len(sınır) - 1):
+    liste = list()
+    for i in range(0, len(sınır)):
         liste.append("_")
     return liste
 
@@ -77,7 +77,7 @@ for i in range(1, 8):
         cevap = liste_olustur(cevap, kelime)
         kontrol = 0
         while kontrol < 1:
-            tahmin = input()
+            tahmin = input("\ntahmin :")
             sonuc = bul(tahmin, kelime)
             if sonuc == True:
                 for k in range(0, len(kelime)):
@@ -99,7 +99,6 @@ for i in range(1, 8):
             print(soru)
             # print(str(kelime))
             print(cevap)
-            continue
 
         # if tahmin == kelime:
         #  print("tebrikler")
