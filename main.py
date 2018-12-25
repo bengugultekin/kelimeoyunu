@@ -7,11 +7,7 @@ from random import randint
 data = pd.read_csv('sorular.csv', sep=';')
 puan = 0
 cevap = "_"
-"""
-def cls():
-    os.system('cls' if os.name=='nt' else 'clear')
-"""
-	
+
 
 def liste_olustur(liste, sınır):
     sınır = list(sınır)
@@ -33,14 +29,6 @@ def bul(girdi, hedef):
             return True
 
 
-"""
-def kontrolet(hedef):
-    hedef = list(hedef)
-    for i in range (0,hedef):
-        if hedef[i]=="_":
-           return False
-    return True 
-"""
 
 
 def degistir(girdi, hedef):
@@ -58,8 +46,8 @@ def sayi_uret(random):
     return new_random
 
     kontrol = 0
-kullanıcı1adı = "bengu"
-kullanıcı2adı = "furkan"
+kullanıcı1adı = "kullanıcı1"
+kullanıcı2adı = "kullanıcı2"
 kullanıcı1puan = 0
 kullanıcı2puan = 0
 for a in range(0,2):
@@ -72,16 +60,15 @@ for a in range(0,2):
             kelime = sorular.iloc[random]['kelime']
             harf = sorular.iloc[random]['harf']
             print(soru)
-            # print(str(kelime))
+
 
             for i in range(harf):
                 print(' _ ', end='')
 
-            # print(kelime)
+
 
             kelime = list(kelime)
-            # - işeretlerini bir listeye koyup bilinene kelimeleri eşelştigi şekilde - sembolunun uzerine override edicek
-            # - işaretlerini override etmesi için ayrı bir fonksyon cıkar
+
             cevap = liste_olustur(cevap, kelime)
             kontrol = 0
             while kontrol < 1:
@@ -117,21 +104,6 @@ for a in range(0,2):
                         kontrol = kontrol + 1
                         listetemizle(cevap)
 
-
-
-                    """
-                    if len(kelime) == len(cevap): # bu olmazsa len lerinin eşitligi uzerinden hareket et zaten sadece dogruları atıyosun cevapların içine
-                        kontrol = kontrol +1
-                        print("Kelimenin tamamını buldunuz %d \n",puan)
-                    """
-               # print(soru)
-                # print(str(kelime))
-
-                #cls()
-            # if tahmin == kelime:
-            #  print("tebrikler")
-            #  puan = puan + harf * 100
-            #   print(puan)
 			
             print(tahmin)
     if a == 0:
